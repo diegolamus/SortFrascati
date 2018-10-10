@@ -1,4 +1,4 @@
-Sort RMI:
+# Sort RMI:
 
 Esta implementación expone un servidor para hacer sort a travez de una interfaz Sort. Las implementaciones de la interfaz comprenden ShellSort y BubbleSort, componentes intercambiables. Además, tambien se implementa un servidor para consumir el servicio de Sort. El metodo de comunicación es RMI.
 
