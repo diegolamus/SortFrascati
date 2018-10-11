@@ -29,4 +29,19 @@ public class Sort implements Runnable
     // TODO create strings
     s.sort(null);
   }
+  static String [] generarCadenas (int tamanio) {
+		String [] respuesta = new String [tamanio];
+		
+		for (int i = 0; i < tamanio; i++) {
+			String cadena ="";
+			for (int j = 0; j < 60; j++) {
+				int aleatorioGenerador =(int)(Math.random()*(122-97+1)+97);
+				cadena=cadena+(char)(aleatorioGenerador);
+			}
+			respuesta[i]=cadena;
+		}
+		
+		
+		return respuesta;
+	}
 }
