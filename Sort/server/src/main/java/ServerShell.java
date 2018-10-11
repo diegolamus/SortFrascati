@@ -1,13 +1,13 @@
 import org.osoa.sca.annotations.Property;
 
-public class ServerShell implements Sort
+public class ServerShell implements IDistSort
 {
     public Server()
     {
         System.out.println("SERVER created.");
     }
 
-    public final String[] sort(final String[] strings)
+    public final String[] sort(final String[] cadena)
     {
         int salto, aux, i;
         boolean cambios;

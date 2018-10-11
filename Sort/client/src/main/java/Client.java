@@ -2,9 +2,9 @@
 import org.osoa.sca.annotations.Init;
 import org.osoa.sca.annotations.Reference;
 
-public class Sort implements Runnable
+public class Client implements Runnable
 {
-  private Sort s;
+  private IDistSort s;
 
   @Reference
   public final void setPrintService(PrintService service)
@@ -12,7 +12,7 @@ public class Sort implements Runnable
     this.s = service;
   }
 
-  public ClientImpl()
+  public Client()
   {
     System.out.println("CLIENT created");
   }
@@ -26,12 +26,12 @@ public class Sort implements Runnable
   public final void run()
   {
     System.out.println("Call the service...");
-    // TODO create strings
+    //TODO crear experimento
     s.sort(null);
   }
-  static String [] generarCadenas (int tamanio) {
+
+  static String[] generarCadenas (int tamanio) {
 		String [] respuesta = new String [tamanio];
-		
 		for (int i = 0; i < tamanio; i++) {
 			String cadena ="";
 			for (int j = 0; j < 60; j++) {
@@ -40,8 +40,7 @@ public class Sort implements Runnable
 			}
 			respuesta[i]=cadena;
 		}
-		
-		
 		return respuesta;
 	}
+
 }
