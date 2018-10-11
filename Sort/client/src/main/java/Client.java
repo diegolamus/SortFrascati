@@ -26,21 +26,20 @@ public class Client implements Runnable
   public final void run()
   {
     System.out.println("Call the service...");
-    //TODO crear experimento
-    s.sort(null);
+    // Definir los tamanios ( corresponden a los generados con anterioridad )
+    int[] tamanios = { 200000, 400000, 600000, 800000, 1000000 };
+    // leer las cadenas
+    for(int tamanio: tamanios) {	
+    	File file = new File("sort-rmi-client/src/main/resources/cadenas"+tamanio".txt"); 
+    	BufferedReader br = new BufferedReader(new FileReader(file)); 
+    	String[] cadenas = new String[tamanio];
+        for(int i = 0; i<tamanio; i++) {
+        	cadenas[i] = br.readLine();
+        }
+        long startTime = System.currentTimeMillis()
+        // llamar el servicio de sort
+        s.sort(cadenas);
+        long estimatedTime = System.currentTimeMillis() - startTime;
+        System.out.println("Sorting for: "+ tamanio + " completed. Elapsed time: "+estimatedTime);
   }
-
-  static String[] generarCadenas (int tamanio) {
-		String [] respuesta = new String [tamanio];
-		for (int i = 0; i < tamanio; i++) {
-			String cadena ="";
-			for (int j = 0; j < 60; j++) {
-				int aleatorioGenerador =(int)(Math.random()*(122-97+1)+97);
-				cadena=cadena+(char)(aleatorioGenerador);
-			}
-			respuesta[i]=cadena;
-		}
-		return respuesta;
-	}
-
 }
