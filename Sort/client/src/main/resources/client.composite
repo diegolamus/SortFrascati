@@ -3,16 +3,23 @@
   xmlns:frascati="http://frascati.ow2.org/xmlns/sca/1.1"
   targetNamespace="http://frascati.ow2.org/helloworld-rmi"
   name="ClientRMI">
+
   <service name="r" promote="client/r">
     <interface.java interface="java.lang.Runnable" />
   </service>
+
   <component name="client">
+
     <service name="r">
       <interface.java interface="java.lang.Runnable" />
     </service>
-    <reference name="sortService">
-      <frascati:binding.rmi host="localhost" serviceName="rmiservice" port="1099"/>
+
+    <reference name="IDistSort">
+      	<frascati:binding.rmi host="localhost" serviceName="rmiservice" port="1099"/>
+	<interface.java interface="annotated.IDistSort"/>
     </reference>
-    <implementation.java class="Client" />
+
+    <implementation.java class="annotated.Client" />
+
   </component>
 </composite>

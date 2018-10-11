@@ -3,10 +3,15 @@
   xmlns:frascati="http://frascati.ow2.org/xmlns/sca/1.1"
   targetNamespace="http://frascati.ow2.org/helloworld-rmi"
   name="ServerRMI">
+
   <component name="server">
+
     <service name="s">
       <frascati:binding.rmi host="localhost" serviceName="rmiservice" port="1099"/>
     </service>
-    <implementation.java class="ServerBubble" />
+
+    <implementation.java class="annotated.ServerShell" />
+
   </component>
+
 </composite>
