@@ -1,12 +1,12 @@
 # SortFrascati
 
-### sort RMI
+### Sort RMI
 
-Esta implementación expone un servidor para hacer sort a travez de una interfaz Sort. Las implementaciones de la interfaz comprenden ShellSort y BubbleSort, componentes intercambiables. Además, tambien se implementa un servidor para consumir el servicio de Sort. El metodo de comunicación es RMI.
+Esta implementación expone un servidor para hacer sort a travez de una interfaz bien definida Sort. Las implementaciones de la interfaz comprenden ShellSort y BubbleSort, componentes intercambiables en el composite del servidor. Además, tambien se implementa un cliente para consumir el servicio de Sort provisto  por el servidor. El metodo de comunicación es RMI.
 
 ### Ejecucion con Frascati:
 
-1. Correr servidor:
+**1. Correr servidor:**
 
 * Navegar hasta carpeta SortFrascati desde la terminal
 * cd Sort
@@ -15,7 +15,7 @@ Esta implementación expone un servidor para hacer sort a travez de una interfaz
 * frascati run server -libpath rmi-server.jar
 
 
-2. Correr cliente
+**2. Correr cliente**
 
 * Navegar hasta carpeta SortFrascati desde la terminal
 * cd Sort
