@@ -7,8 +7,8 @@
   <component name="merger">
 
     <service name="Merger">
-      <interface.java  interface="annotated.IDistSort">
-      <frascati:binding.rmi host="localhost" serviceName="rmiservice" port="1099"/>
+      <interface.java  interface="annotated.IDistSort"/>
+      <frascati:binding.rmi host="localhost" serviceName="rmiservice" port="2550"/>
     </service>
 
     <!--<reference name="Sorter1">

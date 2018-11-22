@@ -13,6 +13,7 @@ public class Merger implements IDistSort
     {
 		System.out.println("MERGER called.");
 		// TODO create merger strategy
+		return null;
     }
 
 }

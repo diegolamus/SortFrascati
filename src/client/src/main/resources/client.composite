@@ -15,7 +15,6 @@
     </service>
 
     <reference name="Merger">
-	<interface.java interface="annotated.IDistSort"/>
       	<frascati:binding.rmi host="localhost" serviceName="rmiservice" port="1099"/>
     </reference>
 
