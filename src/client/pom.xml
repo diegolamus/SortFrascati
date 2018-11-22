@@ -7,7 +7,7 @@
   <groupId>sort</groupId>
   <artifactId>sort-rmi-client</artifactId>
   <packaging>jar</packaging>
-  <name>RMI client</name>
+  <name>ClientRMI</name>
   <parent>
     <groupId>sort</groupId>
     <artifactId>sort-rmi-parent</artifactId>

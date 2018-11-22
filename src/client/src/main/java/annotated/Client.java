@@ -10,9 +10,9 @@ import java.io.FileReader;
 import java.io.FileNotFoundException;
 
 public class Client implements Runnable {
-	@Reference(name = "IDistSort")
+	
+	@Reference(name = "Merger")
 	private IDistSort s;
-	// he cambiado printservice por la interfece
 
 	public Client() {
 		System.out.println("CLIENT created");
@@ -25,6 +25,9 @@ public class Client implements Runnable {
 
 	public final void run() {
 		System.out.println("Call the service...");
+		String[] arr = {"b","c","d"}
+		s.sort(arr);
+		return;
 		// Definir los tamanios ( corresponden a los generados con anterioridad )
 		int[] tamanios = { 20000, 40000, 60000, 80000, 100000 };
 		// leer las cadenas
