@@ -15,18 +15,18 @@ public class Sorter implements IDistSort
       
     }
 	
-	// Merges two subarrays of arr[]. 
+ // Merges two subarrays of arr[]. 
     // First subarray is arr[l..m] 
     // Second subarray is arr[m+1..r] 
-    void merge(int arr[], int l, int m, int r) 
+    void merge(String arr[], int l, int m, int r) 
     { 
         // Find sizes of two subarrays to be merged 
         int n1 = m - l + 1; 
         int n2 = r - m; 
   
         /* Create temp arrays */
-        int L[] = new int [n1]; 
-        int R[] = new int [n2]; 
+        String L[] = new String [n1]; 
+        String R[] = new String [n2]; 
   
         /*Copy data to temp arrays*/
         for (int i=0; i<n1; ++i) 
@@ -44,7 +44,7 @@ public class Sorter implements IDistSort
         int k = l; 
         while (i < n1 && j < n2) 
         { 
-            if (L[i] <= R[j]) 
+            if (L[i].compareTo(R[j])<0) 
             { 
                 arr[k] = L[i]; 
                 i++; 
@@ -76,7 +76,7 @@ public class Sorter implements IDistSort
   
     // Main function that sorts arr[l..r] using 
     // merge() 
-    void sort(int arr[], int l, int r) 
+    void sort(String arr[], int l, int r) 
     { 
         if (l < r) 
         { 
@@ -91,5 +91,6 @@ public class Sorter implements IDistSort
             merge(arr, l, m, r); 
         } 
     } 
+  
 
 }
