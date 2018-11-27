@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite xmlns="http://www.osoa.org/xmlns/sca/1.0"
+  xmlns:frascati="http://frascati.ow2.org/xmlns/sca/1.1"
+  targetNamespace="http://frascati.ow2.org/helloworld-rmi"
+  name="MergerRMI">
+
+  <component name="merger">
+
+    <service name="Merger">
+      <interface.java  interface="annotated.IDistSort"/>
+      <frascati:binding.rmi host="localhost" serviceName="rmiservice" port="5000"/>
+    </service>
+
+    <reference name="sorter1">
+	<frascati:binding.rmi host="192.168.161.23" serviceName="rmiservice" port="5001"/>
+    </reference>
+    <reference name="sorter2">
+	<frascati:binding.rmi host="192.168.161.23" serviceName="rmiservice" port="5002"/>
+    </reference>
+    <reference name="sorter3">
+	<frascati:binding.rmi host="192.168.161.21" serviceName="rmiservice" port="5003"/>
+    </reference>
+    <reference name="sorter4">
+	<frascati:binding.rmi host="192.168.161.21" serviceName="rmiservice" port="5004"/>
+    </reference>
+    <reference name="sorter5">
+	<frascati:binding.rmi host="192.168.161.24" serviceName="rmiservice" port="5005"/>
+    </reference>
+    <reference name="sorter6">
+	<frascati:binding.rmi host="192.168.161.24" serviceName="rmiservice" port="5006"/>
+    </reference>
+    <reference name="sorter7">
+	<frascati:binding.rmi host="192.168.161.25" serviceName="rmiservice" port="5007"/>
+    </reference>
+    <reference name="sorter8">
+	<frascati:binding.rmi host="192.168.161.25" serviceName="rmiservice" port="5008"/>
+    </reference>
+    <reference name="sorter9">
+	<frascati:binding.rmi host="192.168.161.27" serviceName="rmiservice" port="5009"/>
+    </reference>
+    <reference name="sorter10">
+	<frascati:binding.rmi host="192.168.161.27" serviceName="rmiservice" port="5010"/>
+    </reference>
+    <reference name="sorter11">
+	<frascati:binding.rmi host="192.168.161.28" serviceName="rmiservice" port="5011"/>
+    </reference>
+    <reference name="sorter12">
+	<frascati:binding.rmi host="192.168.161.28" serviceName="rmiservice" port="5012"/>
+    </reference>
+
+    <implementation.java class="annotated.Merger" />
+
+  </component>
+
+</composite>

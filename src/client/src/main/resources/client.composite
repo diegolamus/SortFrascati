@@ -15,7 +15,7 @@
     </service>
 
     <reference name="Merger">
-      	<frascati:binding.rmi host="localhost" serviceName="rmiservice" port="1099"/>
+      	<frascati:binding.rmi host="localhost" serviceName="rmiservice" port="5000"/>
     </reference>
 
     <implementation.java class="annotated.Client" />

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>sort</groupId>
+  <artifactId>merger</artifactId>
+  <packaging>jar</packaging>
+  <name>MergerRMI</name>
+  <parent>
+    <groupId>sort</groupId>
+    <artifactId>sort-rmi-parent</artifactId>
+    <version>1.4</version>
+  </parent>
+  <properties>
+    <composite.file>merger</composite.file>
+  </properties>
+</project>

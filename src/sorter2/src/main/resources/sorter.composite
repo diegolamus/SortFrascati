@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<composite xmlns="http://www.osoa.org/xmlns/sca/1.0"
+  xmlns:frascati="http://frascati.ow2.org/xmlns/sca/1.1"
+  targetNamespace="http://frascati.ow2.org/helloworld-rmi"
+  name="SorterRMIA">
+
+  <component name="sorter2">
+
+    <service name="sorter2">
+      <interface.java  interface="annotated.IDistSort"/>
+      <frascati:binding.rmi host="localhost" serviceName="rmiservice" port="5002"/>
+    </service>
+
+    <implementation.java class="annotated.Sorter" />
+
+  </component>
+
+</composite>

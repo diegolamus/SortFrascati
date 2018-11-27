@@ -1,9 +1,14 @@
 package annotated;
 
 import org.osoa.sca.annotations.Property;
+import org.osoa.sca.annotations.Reference;
 
 public class Merger implements IDistSort
 {
+	// Monolitico
+	@Reference(name = "sorter1")
+	private IDistSort sorter1;
+
     public Merger()
     {
         System.out.println("MERGER created.");
@@ -12,8 +17,9 @@ public class Merger implements IDistSort
     public final String[] sort(final String[] cadenas)
     {
 		System.out.println("MERGER called.");
-		// TODO create merger strategy
-		return null;
+		// monolítico
+		String[] sorted = sorter1.sort(cadenas);			
+		return sorted;
     }
 
 }
